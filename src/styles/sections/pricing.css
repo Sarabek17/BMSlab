@@ -1,0 +1,183 @@
+/* Blok 11 — narxlar */
+
+.pricing {
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing__orb {
+  width: min(60vw, 620px);
+  aspect-ratio: 1;
+  top: 4%;
+  left: 50%;
+  translate: -50% 0;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.1), transparent 68%);
+}
+
+.pricing__grid {
+  display: grid;
+  gap: 18px;
+}
+
+.plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(24px, 2.6vw, 30px);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.45s var(--ease),
+    border-color 0.45s var(--ease),
+    box-shadow 0.45s var(--ease);
+}
+
+@media (hover: hover) {
+  .plan:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.plan--featured {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-accent);
+}
+
+.plan__tag {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  translate: -50% 0;
+  padding: 5px 14px;
+  border-radius: var(--r-full);
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.plan__name {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.plan__price {
+  margin-top: 12px;
+  font-size: clamp(1.55rem, 2.5vw, 1.95rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--navy);
+}
+
+.plan__price--text {
+  font-size: clamp(1.02rem, 1.5vw, 1.15rem);
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.plan__sub {
+  margin-top: 6px;
+  color: var(--text-dim);
+  font-size: var(--fs-sm);
+}
+
+.plan__list {
+  display: grid;
+  gap: 11px;
+  margin: 20px 0 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.plan__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.plan__list .icon {
+  width: 17px;
+  height: 17px;
+  flex: none;
+  margin-top: 3px;
+  stroke-width: 2.6;
+}
+
+.plan__list .is-on {
+  color: var(--text);
+}
+
+.plan__list .is-on .icon {
+  color: var(--accent);
+}
+
+.plan__list .is-off {
+  color: var(--text-dim);
+}
+
+.plan__list .is-off .icon {
+  color: #c3cad4;
+}
+
+.plan .btn {
+  margin-top: auto;
+}
+
+/* Pastki qism */
+.pricing__foot {
+  margin-top: clamp(28px, 3.5vw, 40px);
+  text-align: center;
+}
+
+.pricing__foot p {
+  color: var(--text-dim);
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+}
+
+.pay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+
+.pay__logo {
+  padding: 7px 16px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+  color: var(--navy);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 640px) {
+  .pricing__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1080px) {
+  .pricing__grid {
+    grid-template-columns: repeat(4, 1fr);
+    align-items: stretch;
+  }
+}

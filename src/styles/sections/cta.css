@@ -1,0 +1,75 @@
+/* Blok 13 — yakuniy CTA (och sahifada to'q blok: diqqatni tortadi) */
+
+.cta__box {
+  position: relative;
+  padding: clamp(38px, 6vw, 70px) clamp(24px, 4vw, 56px);
+  border-radius: var(--r-xl);
+  background: var(--navy);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta__orb {
+  position: absolute;
+  top: -55%;
+  left: 50%;
+  translate: -50% 0;
+  width: min(90%, 620px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 62%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.cta__title {
+  position: relative;
+  max-width: 720px;
+  margin-inline: auto;
+  font-size: var(--fs-h2);
+  color: #ffffff;
+}
+
+.cta__text {
+  position: relative;
+  max-width: 560px;
+  margin: 16px auto 0;
+  color: #b6c2d4;
+  font-size: var(--fs-lead);
+  line-height: 1.7;
+}
+
+.cta__actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+/* To'q fonda tugmalar teskari ranglarda */
+.cta__actions .btn--primary {
+  background: #ffffff;
+  color: var(--navy);
+}
+
+.cta__actions .btn--ghost {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+@media (hover: hover) {
+  .cta__actions .btn--primary:hover {
+    background: #eaf6f9;
+    color: var(--navy);
+  }
+  .cta__actions .btn--ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+  }
+}

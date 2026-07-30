@@ -1,0 +1,252 @@
+/* Qayta ishlatiladigan komponentlar: tugma, karta, badge, sarlavha bloki */
+
+/* ---------- Tugmalar ---------- */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border-radius: var(--r-full);
+  font-size: 0.97rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    transform 0.35s var(--ease),
+    box-shadow 0.35s var(--ease),
+    background-color 0.3s var(--ease),
+    border-color 0.3s var(--ease),
+    color 0.3s var(--ease);
+  will-change: transform;
+}
+
+.btn .icon {
+  width: 19px;
+  height: 19px;
+}
+
+/* Asosiy CTA — logotipdagi navy. Oq fonda kuchli, lekin ko'zni qamashtirmaydi. */
+.btn--primary {
+  background: var(--navy);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--ghost {
+  background: #ffffff;
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--outline {
+  background: var(--accent-tint);
+  border: 1px solid var(--border-accent);
+  color: var(--accent-strong);
+}
+
+.btn--sm {
+  padding: 9px 17px;
+  font-size: 0.87rem;
+}
+
+.btn--lg {
+  padding: 16px 30px;
+  font-size: 1rem;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+@media (hover: hover) {
+  .btn--primary:hover {
+    background: var(--navy-soft);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .btn--ghost:hover {
+    border-color: var(--accent);
+    color: var(--accent-strong);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .btn--outline:hover {
+    background: #e2f7fb;
+    transform: translateY(-2px);
+  }
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.985);
+}
+
+/* ---------- Bo'lim sarlavhasi ---------- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 14px 6px 10px;
+  border-radius: var(--r-full);
+  border: 1px solid var(--border-accent);
+  background: var(--accent-tint);
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(14, 142, 166, 0.14);
+}
+
+.section-head {
+  max-width: 720px;
+  margin-bottom: clamp(36px, 5vw, 60px);
+}
+
+.section-head--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-head__title {
+  margin-top: 18px;
+  font-size: var(--fs-h2);
+  color: var(--text);
+}
+
+.section-head__text {
+  margin-top: 16px;
+  color: var(--text-muted);
+  font-size: var(--fs-lead);
+  line-height: 1.72;
+}
+
+.grad-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Kartalar ---------- */
+.card {
+  position: relative;
+  padding: clamp(22px, 2.6vw, 30px);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.45s var(--ease),
+    border-color 0.45s var(--ease),
+    box-shadow 0.45s var(--ease);
+}
+
+.card__icon {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: var(--r-md);
+  background: var(--accent-tint);
+  color: var(--accent);
+}
+
+.card__title {
+  font-size: var(--fs-h3);
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.card__text {
+  color: var(--text-muted);
+  line-height: 1.68;
+}
+
+@media (hover: hover) {
+  .card--hover:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-accent);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+/* Sichqoncha ortidan yuruvchi yumshoq yorug'lik (JS `--mx`/`--my` beradi) */
+.card--spot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    360px circle at var(--mx, 50%) var(--my, 0%),
+    rgba(34, 211, 238, 0.09),
+    transparent 62%
+  );
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .card--spot:hover::before {
+    opacity: 1;
+  }
+}
+
+/* ---------- Yordamchi ---------- */
+.grid {
+  display: grid;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+@media (min-width: 640px) {
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Fon dog'lari — och temada juda yumshoq bo'lishi kerak */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.divider-line {
+  height: 1px;
+  border: 0;
+  background: var(--border);
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <title>BMS Lab</title>
+  <rect x="0" y="0" width="160" height="160" rx="34" fill="#0F172A"/>
+  <text x="80" y="92" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="46" letter-spacing="1" fill="#FFFFFF">BMS</text>
+  <rect x="50" y="110" width="60" height="9" rx="4.5" fill="#22D3EE"/>
+</svg>

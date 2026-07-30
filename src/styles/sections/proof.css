@@ -1,0 +1,378 @@
+/* Blok 3 — manba isboti (interaktiv demo) */
+
+.proof {
+  position: relative;
+  overflow: hidden;
+}
+
+.proof__orb {
+  width: min(64vw, 660px);
+  aspect-ratio: 1;
+  top: 8%;
+  left: 50%;
+  translate: -50% 0;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.12), transparent 68%);
+}
+
+.proof__demo {
+  display: grid;
+  gap: 20px;
+  padding: clamp(16px, 2.4vw, 24px);
+  border-radius: var(--r-xl);
+  border: 1px solid var(--border);
+  background: #ffffff;
+  box-shadow: var(--shadow-md);
+}
+
+.proof__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 5px 12px;
+  border-radius: var(--r-full);
+  background: var(--surface-2);
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.proof__q {
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  border-radius: var(--r-md);
+  border-bottom-right-radius: 5px;
+  background: var(--navy);
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.proof__a {
+  padding: 18px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  border-bottom-left-radius: 5px;
+  background: var(--surface-2);
+}
+
+.proof__a p {
+  display: inline;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.proof__a p + button {
+  margin-right: 3px;
+}
+
+/* Manba raqami */
+.cite {
+  display: inline-grid;
+  place-items: center;
+  width: 21px;
+  height: 21px;
+  margin: 0 2px 0 3px;
+  border-radius: 7px;
+  border: 1px solid var(--border-accent);
+  background: var(--accent-tint);
+  color: var(--accent-strong);
+  font-size: 0.7rem;
+  font-weight: 800;
+  vertical-align: 2px;
+  transition:
+    background-color 0.28s var(--ease),
+    color 0.28s var(--ease),
+    transform 0.28s var(--ease),
+    box-shadow 0.28s var(--ease);
+}
+
+.cite:hover {
+  background: #d5f4fa;
+  transform: translateY(-2px);
+}
+
+.cite.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  box-shadow: var(--ring-accent);
+}
+
+.proof__hint {
+  display: block !important;
+  margin-top: 16px;
+  color: var(--text-dim);
+  font-size: var(--fs-sm);
+}
+
+/* O'ng panel */
+.proof__panel {
+  position: relative;
+  min-height: 340px;
+}
+
+.srccard {
+  position: absolute;
+  inset: 0;
+  padding: clamp(18px, 2.2vw, 24px);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border-accent);
+  background: linear-gradient(180deg, var(--accent-tint) 0%, #ffffff 45%);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+  transition:
+    opacity 0.42s var(--ease),
+    transform 0.42s var(--ease),
+    visibility 0.42s var(--ease);
+  overflow-y: auto;
+}
+
+.srccard.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.srccard__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.srccard__type {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.srccard__type .icon {
+  width: 17px;
+  height: 17px;
+}
+
+.srccard__num {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 9px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.srccard__title {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.srccard__time {
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.srccard__quote {
+  margin-top: 16px;
+  padding-left: 14px;
+  border-left: 2px solid var(--border-accent);
+  color: var(--text-muted);
+  font-size: 0.93rem;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.srccard__note {
+  margin-top: 14px;
+  color: var(--text-dim);
+  font-size: var(--fs-xs);
+  line-height: 1.55;
+}
+
+/* Audio pleyer (namuna) */
+.player {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  background: #ffffff;
+}
+
+.player__btn {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #ffffff;
+  transition:
+    transform 0.28s var(--ease),
+    box-shadow 0.28s var(--ease);
+}
+
+.player__btn:hover {
+  transform: scale(1.07);
+  box-shadow: var(--ring-accent);
+}
+
+.player__btn .icon {
+  width: 15px;
+  height: 15px;
+}
+
+.player__btn .icon--play {
+  margin-left: 2px;
+}
+
+.player__btn .icon--pause {
+  display: none;
+}
+
+.player.is-playing .icon--play {
+  display: none;
+}
+
+.player.is-playing .icon--pause {
+  display: block;
+}
+
+.player__wave {
+  display: flex;
+  align-items: center;
+  gap: 2.5px;
+  flex: 1;
+  height: 32px;
+  min-width: 0;
+}
+
+.player__wave i {
+  flex: 1;
+  min-width: 2px;
+  border-radius: 2px;
+  background: #d8dee7;
+  transition:
+    background-color 0.2s linear,
+    height 0.25s var(--ease);
+}
+
+.player__wave i.is-played {
+  background: var(--accent);
+}
+
+.player__time {
+  flex: none;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Slayd namunasi */
+.slide {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  background: #ffffff;
+}
+
+.slide__head {
+  width: 45%;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--gradient);
+  margin-bottom: 16px;
+}
+
+.slide__chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 90px;
+}
+
+.slide__chart span {
+  flex: 1;
+  height: var(--h);
+  border-radius: 4px 4px 2px 2px;
+  background: linear-gradient(180deg, #4bc6dd, #b9d0f7);
+}
+
+.slide__lines {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.slide__lines i {
+  height: 6px;
+  border-radius: 3px;
+  background: #e6eaf0;
+}
+
+.slide__lines i:last-child {
+  width: 62%;
+}
+
+/* Hujjat namunasi */
+.doc {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 16px;
+  padding: 18px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  background: #ffffff;
+}
+
+.doc i {
+  width: var(--w);
+  height: 8px;
+  border-radius: 4px;
+  background: #e6eaf0;
+}
+
+.doc i.is-mark {
+  background: linear-gradient(90deg, #7fdcec, #d5f4fa);
+}
+
+.proof__footnote {
+  max-width: 640px;
+  margin: 24px auto 0;
+  color: var(--text-dim);
+  font-size: var(--fs-sm);
+  font-style: italic;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .proof__demo {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .proof__panel {
+    min-height: 420px;
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+  }
+}

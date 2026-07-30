@@ -1,0 +1,28 @@
+services:
+  landing:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bmslab-landing:latest
+    container_name: bmslab-landing
+    restart: unless-stopped
+    ports:
+      # Tashqi portni `.env` dagi LANDING_PORT bilan o'zgartirsa bo'ladi.
+      # Serverda reverse-proxy (Traefik/nginx) ortida ishlatilsa ham shu yerdan boshqariladi.
+      - '${LANDING_PORT:-8090}:80'
+    volumes:
+      # Hamkorlarni qayta build qilmasdan o'zgartirish uchun: shu ikki manzil
+      # host'dan konteynerga ulanadi. Faylni tahrirlab, sahifani yangilash kifoya.
+      - ./public/partners.json:/usr/share/nginx/html/partners.json:ro
+      - ./public/partners:/usr/share/nginx/html/partners:ro
+    healthcheck:
+      test: ['CMD', 'wget', '--spider', '-q', 'http://127.0.0.1/']
+      interval: 30s
+      timeout: 4s
+      retries: 3
+      start_period: 5s
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '3'
