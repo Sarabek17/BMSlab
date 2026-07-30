@@ -1,0 +1,20 @@
+{
+  "_yordam": [
+    "Hamkorlar ro'yxati. Saytni qayta build qilish SHART EMAS —",
+    "shu faylni tahrirlab, sahifani yangilasangiz kifoya.",
+    "Logotip fayllarini 'public/partners/' papkasiga qo'ying.",
+    "",
+    "Har bir yozuv:",
+    "  name — kompaniya nomi (majburiy). Logotip bo'lmasa nomi matn bo'lib chiqadi.",
+    "  logo — '/partners/fayl.svg' yoki '.png' (ixtiyoriy)",
+    "  url  — bosilganda ochiladigan sayt (ixtiyoriy)",
+    "",
+    "Namuna:",
+    "  { \"name\": \"Alfa Group\", \"logo\": \"/partners/alfa.svg\", \"url\": \"https://alfa.uz\" }",
+    "",
+    "8 tadan ko'p bo'lsa avtomatik ikki qatorga bo'linadi.",
+    "Ro'yxat bo'sh bo'lsa 'Hamkorlar' bo'limi saytda umuman ko'rinmaydi.",
+    "MUHIM: faqat haqiqatan hamkor bo'lgan kompaniyalarni yozing."
+  ],
+  "partners": []
+}

@@ -1,0 +1,7 @@
+# Windows va Linux o'rtasida qator oxiri chalkashmasligi uchun
+* text=auto eol=lf
+
+# Ikkilik fayllar
+*.png binary
+*.jpg binary
+*.woff2 binary

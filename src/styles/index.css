@@ -1,0 +1,20 @@
+@import './tokens.css';
+@import './base.css';
+@import './components.css';
+@import './animations.css';
+
+@import './sections/header.css';
+@import './sections/hero.css';
+@import './sections/proof.css';
+@import './sections/how.css';
+@import './sections/council.css';
+@import './sections/sources.css';
+@import './sections/templates.css';
+@import './sections/audience.css';
+@import './sections/partners.css';
+@import './sections/experts.css';
+@import './sections/pricing.css';
+@import './sections/faq.css';
+@import './sections/cta.css';
+@import './sections/footer.css';
+@import './sections/modal.css';

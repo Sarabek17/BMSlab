@@ -1,0 +1,1455 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>BMS Lab — ekspert bilimidan raqamli egizak</title>
+    <meta
+      name="description"
+      content="Audio darslar, kitoblar va hujjatlardan raqamli egizak quramiz. Har bir javob manbaga tayanadi — dars yozuvining aynan o'sha daqiqasini eshitasiz."
+    />
+    <link rel="canonical" href="https://bmslab.uz/" />
+    <link rel="alternate" hreflang="uz" href="https://bmslab.uz/" />
+    <link rel="alternate" hreflang="ru" href="https://bmslab.uz/?lang=ru" />
+    <link rel="alternate" hreflang="x-default" href="https://bmslab.uz/" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <link
+      rel="preload"
+      href="/fonts/manrope-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BMS Lab" />
+    <meta property="og:locale" content="uz_UZ" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:url" content="https://bmslab.uz/" />
+    <meta property="og:title" content="BMS Lab — ekspert bilimidan raqamli egizak" />
+    <meta
+      property="og:description"
+      content="Ustozning javobi, ustozning ovozi bilan isbotlangan holda. Har bir javob manbaga tayanadi."
+    />
+    <meta property="og:image" content="https://bmslab.uz/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BMS Lab — ekspert bilimidan raqamli egizak" />
+    <meta
+      name="twitter:description"
+      content="Ustozning javobi, ustozning ovozi bilan isbotlangan holda."
+    />
+    <meta name="twitter:image" content="https://bmslab.uz/og-image.png" />
+
+    <script type="module" src="/src/main.ts"></script>
+
+    <!-- JS o'chirilgan bo'lsa animatsiya boshlang'ich holatlari kontentni yashirmasin -->
+    <noscript>
+      <style>
+        [data-reveal],
+        [data-reveal-group] > *,
+        .hero__content > *,
+        .msg {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+        .msg--typing,
+        .scroll-progress {
+          display: none !important;
+        }
+      </style>
+    </noscript>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Asosiy kontentga o'tish</a>
+
+    <!-- ============ SVG ikon spraytі ============ -->
+    <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="i-headphones" viewBox="0 0 24 24">
+        <path d="M4 15v-3a8 8 0 0 1 16 0v3" />
+        <path d="M4 15a2 2 0 0 1 2-2h1v6H6a2 2 0 0 1-2-2zM20 15a2 2 0 0 0-2-2h-1v6h1a2 2 0 0 0 2-2z" />
+      </symbol>
+      <symbol id="i-bot" viewBox="0 0 24 24">
+        <rect x="4" y="8" width="16" height="12" rx="3" />
+        <path d="M12 4v4M9 14h.01M15 14h.01M9 17.5h6" />
+      </symbol>
+      <symbol id="i-user" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M5 21a7 7 0 0 1 14 0" />
+      </symbol>
+      <symbol id="i-upload" viewBox="0 0 24 24">
+        <path d="M12 16V4M8 8l4-4 4 4" />
+        <path d="M4 15v3a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-3" />
+      </symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24">
+        <path d="M20 14a3 3 0 0 1-3 3H9l-5 4V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3z" />
+        <path d="M9 9h6M9 12.5h4" />
+      </symbol>
+      <symbol id="i-council" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3" />
+        <circle cx="12" cy="4" r="1.6" />
+        <circle cx="19" cy="8" r="1.6" />
+        <circle cx="19" cy="16" r="1.6" />
+        <circle cx="12" cy="20" r="1.6" />
+        <circle cx="5" cy="16" r="1.6" />
+        <circle cx="5" cy="8" r="1.6" />
+      </symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24">
+        <rect x="4" y="10" width="16" height="11" rx="3" />
+        <path d="M8 10V7a4 4 0 0 1 8 0v3M12 15v2" />
+      </symbol>
+      <symbol id="i-compass" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="m15.5 8.5-2 5-5 2 2-5z" />
+      </symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24">
+        <path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z" />
+        <circle cx="12" cy="12" r="2.6" />
+      </symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3c2.4 2.6 3.6 5.6 3.6 9S14.4 18.4 12 21c-2.4-2.6-3.6-5.6-3.6-9S9.6 5.6 12 3z" />
+      </symbol>
+      <symbol id="i-file" viewBox="0 0 24 24">
+        <path d="M14 3H8a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8z" />
+        <path d="M14 3v5h5" />
+      </symbol>
+      <symbol id="i-table" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="16" rx="3" />
+        <path d="M3 10h18M9 10v10M3 15h18" />
+      </symbol>
+      <symbol id="i-slides" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="12" rx="2.5" />
+        <path d="M12 16v4M9 20h6" />
+      </symbol>
+      <symbol id="i-video" viewBox="0 0 24 24">
+        <rect x="3" y="6" width="12" height="12" rx="3" />
+        <path d="m15 11 6-3v8l-6-3z" />
+      </symbol>
+      <symbol id="i-play" viewBox="0 0 24 24">
+        <path d="M7 4.8v14.4a1 1 0 0 0 1.53.85l11.2-7.2a1 1 0 0 0 0-1.7L8.53 3.95A1 1 0 0 0 7 4.8z" fill="currentColor" stroke="none" />
+      </symbol>
+      <symbol id="i-pause" viewBox="0 0 24 24">
+        <rect x="6" y="4" width="4" height="16" rx="1.4" fill="currentColor" stroke="none" />
+        <rect x="14" y="4" width="4" height="16" rx="1.4" fill="currentColor" stroke="none" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m4.5 12.5 5 5 10-11" />
+      </symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24">
+        <path d="M4 12h15M13 6l6 6-6 6" />
+      </symbol>
+      <symbol id="i-telegram" viewBox="0 0 24 24">
+        <path
+          d="M21.7 3.4 2.9 10.6c-1.1.4-1.1 1.1-.2 1.4l4.7 1.5 1.8 5.5c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.2-.5-1.8-1.1-1.5z"
+          fill="currentColor"
+          stroke="none"
+        />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path
+          d="M21 16.9v2.5a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6A2 2 0 0 1 3.3 1.6h2.5a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L7 9.4a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.4 1.9.6 2.9.8a2 2 0 0 1 1.7 2z"
+        />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <rect x="2.5" y="5" width="19" height="14" rx="3" />
+        <path d="m3.5 7 8.5 6 8.5-6" />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z" />
+        <circle cx="12" cy="10" r="2.6" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M18 6 6 18" />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="M12 2.8 4.5 6v6c0 4.6 3.1 8.4 7.5 9.6 4.4-1.2 7.5-5 7.5-9.6V6z" />
+        <path d="m9 12 2.2 2.2L15.4 10" />
+      </symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24">
+        <path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18" />
+      </symbol>
+    </svg>
+
+    <div class="scroll-progress" aria-hidden="true"><span data-progress-bar></span></div>
+
+    <!-- ============ HEADER ============ -->
+    <header class="header" data-header>
+      <div class="header__inner container">
+        <a class="header__logo" href="#hero" aria-label="BMS Lab — bosh sahifa">
+          <img src="/logos/bms-wordmark-dark.svg" alt="BMS Lab" width="132" height="40" />
+        </a>
+
+        <nav class="nav" data-nav aria-label="Asosiy menyu">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#proof" data-i18n="nav.proof">Manba isboti</a></li>
+            <li><a class="nav__link" href="#how" data-i18n="nav.how">Qanday ishlaydi</a></li>
+            <li><a class="nav__link" href="#council" data-i18n="nav.council">Kengash</a></li>
+            <li><a class="nav__link" href="#audience" data-i18n="nav.audience">Kimga</a></li>
+            <li><a class="nav__link" href="#pricing" data-i18n="nav.pricing">Narxlar</a></li>
+            <li><a class="nav__link" href="#faq" data-i18n="nav.faq">Savollar</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <div class="lang" data-lang role="group" aria-label="Til / Язык">
+            <button class="lang__btn is-active" type="button" data-lang-btn="uz" aria-pressed="true">
+              UZ
+            </button>
+            <button class="lang__btn" type="button" data-lang-btn="ru" aria-pressed="false">RU</button>
+          </div>
+
+          <a class="btn btn--primary btn--sm header__cta" href="#" data-bot-link="header" data-i18n="nav.cta">
+            <span>Telegramda boshlash</span>
+          </a>
+
+          <button
+            class="burger"
+            type="button"
+            data-burger
+            aria-label="Menyu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobil menyu -->
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu data-lenis-prevent hidden>
+      <nav class="mobile-menu__inner" aria-label="Mobil menyu">
+        <a class="mobile-menu__link" href="#proof" data-i18n="nav.proof">Manba isboti</a>
+        <a class="mobile-menu__link" href="#how" data-i18n="nav.how">Qanday ishlaydi</a>
+        <a class="mobile-menu__link" href="#council" data-i18n="nav.council">Kengash</a>
+        <a class="mobile-menu__link" href="#audience" data-i18n="nav.audience">Kimga</a>
+        <a class="mobile-menu__link" href="#experts" data-i18n="nav.experts">Ekspertlarga</a>
+        <a class="mobile-menu__link" href="#pricing" data-i18n="nav.pricing">Narxlar</a>
+        <a class="mobile-menu__link" href="#faq" data-i18n="nav.faq">Savollar</a>
+        <a class="btn btn--primary btn--block mobile-menu__cta" href="#" data-bot-link="mobile_menu">
+          <svg class="icon"><use href="#i-telegram" /></svg>
+          <span data-i18n="nav.cta">Telegramda boshlash</span>
+        </a>
+      </nav>
+    </div>
+
+    <main id="main">
+      <!-- ============ 1. HERO ============ -->
+      <section class="hero" id="hero">
+        <div class="hero__bg" aria-hidden="true">
+          <span class="glow-orb hero__orb hero__orb--1"></span>
+          <span class="glow-orb hero__orb hero__orb--2"></span>
+          <span class="glow-orb hero__orb hero__orb--3"></span>
+          <div class="hero__grid"></div>
+        </div>
+
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="eyebrow" data-hero-eyebrow>
+              <span data-i18n="hero.eyebrow">Raqamli egizak platformasi</span>
+            </p>
+
+            <h1 class="hero__title" data-split data-i18n="hero.title">
+              Ustozning javobi, ustozning ovozi bilan isbotlangan holda
+            </h1>
+
+            <p class="hero__lead" data-hero-lead data-i18n="hero.lead">
+              Audio darslar, kitoblar, shablonlar va hujjatlardan raqamli egizak quramiz. Har bir
+              javob manbadan olinadi — dars yozuvining aynan o'sha daqiqasini eshitasiz.
+            </p>
+
+            <div class="hero__actions" data-hero-actions>
+              <a class="btn btn--primary btn--lg" href="#" data-bot-link="landing_hero" data-magnetic>
+                <svg class="icon"><use href="#i-telegram" /></svg>
+                <span data-i18n="hero.ctaPrimary">Telegramda bepul sinash</span>
+              </a>
+              <button class="btn btn--ghost btn--lg" type="button" data-demo-open>
+                <svg class="icon"><use href="#i-play" /></svg>
+                <span data-i18n="hero.ctaSecondary">Qanday ishlaydi — 90 soniya</span>
+              </button>
+            </div>
+
+            <p class="hero__note" data-hero-note data-i18n="hero.note">
+              Ro'yxatdan o'tish shart emas — 3 ta savol bepul.
+            </p>
+          </div>
+
+          <!-- Telefon mockup: jonli chat namunasi -->
+          <div class="hero__visual" data-hero-visual>
+            <div class="phone" data-phone>
+              <div class="phone__glow" aria-hidden="true"></div>
+              <div class="phone__frame">
+                <div class="phone__notch" aria-hidden="true"></div>
+                <div class="phone__screen">
+                  <div class="chat__head">
+                    <span class="chat__avatar" aria-hidden="true">BMS</span>
+                    <span class="chat__meta">
+                      <b data-i18n="phone.botName">Raqamli egizak</b>
+                      <i data-i18n="phone.botStatus">onlayn</i>
+                    </span>
+                  </div>
+
+                  <div class="chat__body" data-chat-body>
+                    <div class="msg msg--out" data-msg data-i18n="phone.q">
+                      Yangi mahsulotni bozorga qanday chiqaraman?
+                    </div>
+
+                    <div class="msg msg--typing" data-msg data-typing aria-hidden="true">
+                      <span></span><span></span><span></span>
+                    </div>
+
+                    <div class="msg msg--in" data-msg>
+                      <p>
+                        <span data-i18n="phone.a1">
+                          Avval kichik sinov guruhida tekshiring — keyin kengaytirasiz.
+                        </span>
+                        <sup class="msg__cite">1</sup>
+                      </p>
+                    </div>
+
+                    <div class="msg msg--source" data-msg>
+                      <div class="src">
+                        <span class="src__badge" aria-hidden="true">
+                          <svg class="icon"><use href="#i-check" /></svg>
+                        </span>
+                        <div class="src__info">
+                          <b data-i18n="phone.srcTitle">4-dars — bozorga chiqish</b>
+                          <i data-i18n="phone.srcTime">12:35 – 14:02</i>
+                        </div>
+                        <span class="src__play" aria-hidden="true">
+                          <svg class="icon"><use href="#i-play" /></svg>
+                        </span>
+                      </div>
+                      <div class="src__wave" aria-hidden="true">
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="chat__input" aria-hidden="true">
+                    <span data-i18n="phone.inputPlaceholder">Savolingizni yozing…</span>
+                    <b><svg class="icon"><use href="#i-arrow-right" /></svg></b>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__chip hero__chip--1" data-float="1">
+              <svg class="icon"><use href="#i-headphones" /></svg>
+              <span data-i18n="hero.chip1">Audio manba</span>
+            </div>
+            <div class="hero__chip hero__chip--2" data-float="2">
+              <svg class="icon"><use href="#i-council" /></svg>
+              <span data-i18n="hero.chip2">6 direktor</span>
+            </div>
+          </div>
+        </div>
+
+        <a class="hero__scroll" href="#problem" aria-label="Pastga">
+          <span class="hero__scroll-line" aria-hidden="true"></span>
+        </a>
+      </section>
+
+      <!-- ============ 2. MUAMMO ============ -->
+      <section class="section section--tight" id="problem">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow"><span data-i18n="problem.eyebrow">Muammo</span></p>
+            <h2 class="section-head__title" data-i18n="problem.title">
+              Bilim bor — lekin kerak paytda qo'lda yo'q
+            </h2>
+          </div>
+
+          <div class="grid grid--3" data-reveal-group>
+            <article class="card card--hover card--spot">
+              <span class="card__icon"><svg class="icon"><use href="#i-headphones" /></svg></span>
+              <h3 class="card__title" data-i18n="problem.c1t">30 soat dars</h3>
+              <p class="card__text" data-i18n="problem.c1d">
+                Kerakli gap qaysi darsning qaysi daqiqasida edi — hech kim eslamaydi.
+              </p>
+            </article>
+            <article class="card card--hover card--spot">
+              <span class="card__icon"><svg class="icon"><use href="#i-bot" /></svg></span>
+              <h3 class="card__title" data-i18n="problem.c2t">Oddiy AI</h3>
+              <p class="card__text" data-i18n="problem.c2d">
+                Chiroyli javob beradi, lekin manbasi yo'q — ishonib bo'lmaydi.
+              </p>
+            </article>
+            <article class="card card--hover card--spot">
+              <span class="card__icon"><svg class="icon"><use href="#i-user" /></svg></span>
+              <h3 class="card__title" data-i18n="problem.c3t">Ekspert vaqti</h3>
+              <p class="card__text" data-i18n="problem.c3d">
+                Bitta odam kuniga 10 ta odamga javob bera oladi, 1000 taga emas.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 3. MANBA ISBOTI ============ -->
+      <section class="section section--soft proof" id="proof">
+        <span class="glow-orb proof__orb" aria-hidden="true"></span>
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow"><span data-i18n="proof.eyebrow">Asosiy farqimiz</span></p>
+            <h2 class="section-head__title" data-i18n="proof.title">
+              Har bir jumla ortida — aynan manba
+            </h2>
+            <p class="section-head__text" data-i18n="proof.text">
+              Javobdagi har bir fikr raqamlangan. Bosasiz — dars yozuvining aynan o'sha qismi
+              ochiladi va eshitiladi. Slayd bo'lsa — o'sha sahifaning rasmi chiqadi. Hech narsa
+              o'ylab topilmaydi.
+            </p>
+          </div>
+
+          <div class="proof__demo" data-reveal>
+            <!-- Chap: savol-javob -->
+            <div class="proof__chat">
+              <div class="proof__label">
+                <span data-i18n="proof.sampleLabel">Namuna suhbat</span>
+              </div>
+
+              <div class="proof__q">
+                <p data-i18n="proof.question">
+                  Yangi yo'nalishga kirishdan oldin nimani tekshirish kerak?
+                </p>
+              </div>
+
+              <div class="proof__a">
+                <p data-i18n="proof.answer1">
+                  Avval talab bor-yo'qligini kichik sinov bilan tekshiring — reklama emas, jonli
+                  suhbat orqali.
+                </p>
+                <button class="cite" type="button" data-cite="1" aria-describedby="cite-hint">1</button>
+
+                <p data-i18n="proof.answer2">
+                  Keyin xarajat va daromad chegarasini hisoblang: qaysi nuqtada loyiha o'zini
+                  qoplaydi.
+                </p>
+                <button class="cite" type="button" data-cite="2" aria-describedby="cite-hint">2</button>
+
+                <p data-i18n="proof.answer3">
+                  Uchinchi qadam — raqobatchi qanday narx qo'yganini va nimasi bilan farqlanishingizni
+                  yozib chiqing.
+                </p>
+                <button class="cite" type="button" data-cite="3" aria-describedby="cite-hint">3</button>
+
+                <p class="proof__hint" id="cite-hint" data-i18n="proof.hint">
+                  Raqamni bosing — manba ochiladi.
+                </p>
+              </div>
+            </div>
+
+            <!-- O'ng: manba paneli -->
+            <div class="proof__panel" data-cite-panel>
+              <article class="srccard is-active" data-cite-card="1">
+                <header class="srccard__head">
+                  <span class="srccard__type">
+                    <svg class="icon"><use href="#i-headphones" /></svg>
+                    <span data-i18n="proof.typeAudio">Audio manba</span>
+                  </span>
+                  <span class="srccard__num">1</span>
+                </header>
+                <h3 class="srccard__title" data-i18n="proof.s1title">4-dars — talabni tekshirish</h3>
+                <p class="srccard__time"><span data-i18n="proof.s1time">12:35 – 14:02</span></p>
+                <div class="player" data-player>
+                  <button class="player__btn" type="button" data-player-btn aria-label="Namunani eshitish">
+                    <svg class="icon icon--play"><use href="#i-play" /></svg>
+                    <svg class="icon icon--pause"><use href="#i-pause" /></svg>
+                  </button>
+                  <div class="player__wave" data-player-wave aria-hidden="true"></div>
+                  <span class="player__time" data-player-time>00:00</span>
+                </div>
+                <p class="srccard__quote" data-i18n="proof.s1quote">
+                  «…birinchi mijozni topmagunimizcha katta xarajat qilmang. Beshta suhbat — beshta
+                  aniq javob beradi…»
+                </p>
+                <p class="srccard__note" data-i18n="proof.demoNote">
+                  Bu — sahifadagi namuna. Haqiqiy egizakda bu joyda darsning asl yozuvi ochiladi.
+                </p>
+              </article>
+
+              <article class="srccard" data-cite-card="2">
+                <header class="srccard__head">
+                  <span class="srccard__type">
+                    <svg class="icon"><use href="#i-slides" /></svg>
+                    <span data-i18n="proof.typeSlide">Slayd</span>
+                  </span>
+                  <span class="srccard__num">2</span>
+                </header>
+                <h3 class="srccard__title" data-i18n="proof.s2title">Taqdimot — 17-slayd</h3>
+                <p class="srccard__time"><span data-i18n="proof.s2time">«Qoplash nuqtasi» bo'limi</span></p>
+                <div class="slide" aria-hidden="true">
+                  <div class="slide__head"></div>
+                  <div class="slide__chart">
+                    <span style="--h: 38%"></span><span style="--h: 52%"></span>
+                    <span style="--h: 46%"></span><span style="--h: 68%"></span>
+                    <span style="--h: 81%"></span><span style="--h: 94%"></span>
+                  </div>
+                  <div class="slide__lines"><i></i><i></i></div>
+                </div>
+                <p class="srccard__quote" data-i18n="proof.s2quote">
+                  «Qoplash nuqtasi — oylik doimiy xarajat bo'linadi bitta mijozdan keladigan sof
+                  foydaga.»
+                </p>
+                <p class="srccard__note" data-i18n="proof.demoNote">
+                  Bu — sahifadagi namuna. Haqiqiy egizakda bu joyda darsning asl yozuvi ochiladi.
+                </p>
+              </article>
+
+              <article class="srccard" data-cite-card="3">
+                <header class="srccard__head">
+                  <span class="srccard__type">
+                    <svg class="icon"><use href="#i-file" /></svg>
+                    <span data-i18n="proof.typeDoc">Hujjat</span>
+                  </span>
+                  <span class="srccard__num">3</span>
+                </header>
+                <h3 class="srccard__title" data-i18n="proof.s3title">Qo'llanma — 42-bet</h3>
+                <p class="srccard__time"><span data-i18n="proof.s3time">«Raqobat tahlili» bobi</span></p>
+                <div class="doc" aria-hidden="true">
+                  <i style="--w: 92%"></i><i style="--w: 78%"></i>
+                  <i class="is-mark" style="--w: 86%"></i>
+                  <i style="--w: 64%"></i><i style="--w: 88%"></i><i style="--w: 40%"></i>
+                </div>
+                <p class="srccard__quote" data-i18n="proof.s3quote">
+                  «Raqobatchini narx bo'yicha emas, mijoz nimadan norozi ekani bo'yicha o'rganing.»
+                </p>
+                <p class="srccard__note" data-i18n="proof.demoNote">
+                  Bu — sahifadagi namuna. Haqiqiy egizakda bu joyda darsning asl yozuvi ochiladi.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <p class="proof__footnote" data-reveal data-i18n="proof.footnote">
+            Javobda manbaga tayanmagan jumla bo'lsa, tizim uni javobdan chiqarib tashlaydi.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 4. QANDAY ISHLAYDI ============ -->
+      <section class="section how" id="how">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow"><span data-i18n="how.eyebrow">Jarayon</span></p>
+            <h2 class="section-head__title" data-i18n="how.title">Uch qadamda ishlaydi</h2>
+          </div>
+
+          <ol class="how__steps" data-how>
+            <span class="how__track" aria-hidden="true"><i data-how-line></i></span>
+
+            <li class="how__step" data-reveal>
+              <span class="how__num">01</span>
+              <span class="how__icon"><svg class="icon"><use href="#i-upload" /></svg></span>
+              <h3 class="how__title" data-i18n="how.s1t">Bilim yuklanadi</h3>
+              <p class="how__text" data-i18n="how.s1d">
+                Audio, PDF, PowerPoint, Excel, Word, veb-sahifa. Tizim matnga aylantiradi, mavzularga
+                bo'ladi va indekslaydi.
+              </p>
+            </li>
+
+            <li class="how__step" data-reveal>
+              <span class="how__num">02</span>
+              <span class="how__icon"><svg class="icon"><use href="#i-chat" /></svg></span>
+              <h3 class="how__title" data-i18n="how.s2t">Savol beriladi</h3>
+              <p class="how__text" data-i18n="how.s2d">
+                Telegram yoki saytdan. Tizim savolni tahlil qiladi va bilim bazasidan kerakli
+                bo'limlarni topadi.
+              </p>
+            </li>
+
+            <li class="how__step" data-reveal>
+              <span class="how__num">03</span>
+              <span class="how__icon"><svg class="icon"><use href="#i-council" /></svg></span>
+              <h3 class="how__title" data-i18n="how.s3t">Kengash javob beradi</h3>
+              <p class="how__text" data-i18n="how.s3d">
+                Mutaxassislar o'z yo'nalishi bo'yicha javob yozadi, Rais ularni yagona xulosaga
+                jamlaydi — manbalari bilan.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ 5. DIREKTORLAR KENGASHI ============ -->
+      <section class="section section--soft council" id="council">
+        <span class="glow-orb council__orb" aria-hidden="true"></span>
+        <div class="container">
+          <div class="council__layout">
+            <div class="council__text">
+              <div class="section-head" data-reveal>
+                <p class="eyebrow"><span data-i18n="council.eyebrow">Farqimiz #2</span></p>
+                <h2 class="section-head__title" data-i18n="council.title">
+                  Bitta savol — bir necha mutaxassis nigohi
+                </h2>
+                <p class="section-head__text" data-i18n="council.text">
+                  Savolingizni faqat bitta model o'qimaydi. Uni tegishli yo'nalish direktorlari ko'rib
+                  chiqadi — strategiya, moliya, huquq, operatsiya, marketing, texnologiya. Rais
+                  ularning fikrini solishtiradi, ziddiyat bo'lsa ochiq aytadi va yakuniy tavsiyani
+                  beradi.
+                </p>
+              </div>
+
+              <p class="council__extra" data-reveal data-i18n="council.extra">
+                Direktorlar tarkibi va ularning xarakteri sozlanadi — sizning sohangizga moslanadi.
+              </p>
+
+              <p class="council__active" data-council-info aria-live="polite">
+                <b data-council-role data-i18n="council.raisName">Rais</b>
+                <span data-council-desc data-i18n="council.raisDesc">
+                  Direktorlar fikrini solishtiradi, ziddiyatni ochiq aytadi va yakuniy tavsiyani
+                  beradi.
+                </span>
+              </p>
+            </div>
+
+            <div class="council__visual" data-reveal>
+              <div class="orbit" data-orbit>
+                <span class="orbit__ring orbit__ring--1" aria-hidden="true"></span>
+                <span class="orbit__ring orbit__ring--2" aria-hidden="true"></span>
+
+                <svg class="orbit__spokes" viewBox="0 0 100 100" aria-hidden="true">
+                  <line x1="50" y1="32" x2="50" y2="22" />
+                  <line x1="65.59" y1="41" x2="74.25" y2="36" />
+                  <line x1="65.59" y1="59" x2="74.25" y2="64" />
+                  <line x1="50" y1="68" x2="50" y2="78" />
+                  <line x1="34.41" y1="59" x2="25.75" y2="64" />
+                  <line x1="34.41" y1="41" x2="25.75" y2="36" />
+                </svg>
+
+                <div class="orbit__center" data-orbit-center>
+                  <span class="orbit__center-inner">
+                    <svg class="icon"><use href="#i-spark" /></svg>
+                    <b data-i18n="council.raisName">Rais</b>
+                  </span>
+                </div>
+
+                <div class="orbit__nodes" data-orbit-nodes>
+                  <button
+                    class="orbit__node"
+                    type="button"
+                    style="--i: 0"
+                    data-role="strategy"
+                    data-role-name="Strategiya"
+                    data-role-desc="Uzoq muddatli maqsad va yo'nalishni baholaydi."
+                  >
+                    <svg class="icon"><use href="#i-compass" /></svg>
+                    <span data-i18n="council.r1">Strategiya</span>
+                  </button>
+                  <button
+                    class="orbit__node"
+                    type="button"
+                    style="--i: 1"
+                    data-role="finance"
+                    data-role-name="Moliya"
+                    data-role-desc="Xarajat, daromad va qoplash nuqtasini hisoblab beradi."
+                  >
+                    <svg class="icon"><use href="#i-table" /></svg>
+                    <span data-i18n="council.r2">Moliya</span>
+                  </button>
+                  <button
+                    class="orbit__node"
+                    type="button"
+                    style="--i: 2"
+                    data-role="legal"
+                    data-role-name="Huquq"
+                    data-role-desc="Shartnoma va qoidalarga mos kelishini tekshiradi."
+                  >
+                    <svg class="icon"><use href="#i-shield" /></svg>
+                    <span data-i18n="council.r3">Huquq</span>
+                  </button>
+                  <button
+                    class="orbit__node"
+                    type="button"
+                    style="--i: 3"
+                    data-role="ops"
+                    data-role-name="Operatsiya"
+                    data-role-desc="Amalda qanday bajarilishini bosqichlarga bo'lib beradi."
+                  >
+                    <svg class="icon"><use href="#i-slides" /></svg>
+                    <span data-i18n="council.r4">Operatsiya</span>
+                  </button>
+                  <button
+                    class="orbit__node"
+                    type="button"
+                    style="--i: 4"
+                    data-role="marketing"
+                    data-role-name="Marketing"
+                    data-role-desc="Mijoz va bozor nuqtai nazaridan qarab chiqadi."
+                  >
+                    <svg class="icon"><use href="#i-globe" /></svg>
+                    <span data-i18n="council.r5">Marketing</span>
+                  </button>
+                  <button
+                    class="orbit__node"
+                    type="button"
+                    style="--i: 5"
+                    data-role="tech"
+                    data-role-name="Texnologiya"
+                    data-role-desc="Qanday vosita va tizim bilan yechilishini aytadi."
+                  >
+                    <svg class="icon"><use href="#i-bot" /></svg>
+                    <span data-i18n="council.r6">Texnologiya</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 6. BILIM MANBALARI ============ -->
+      <section class="section section--tight sources" id="sources">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow"><span data-i18n="sources.eyebrow">Formatlar</span></p>
+            <h2 class="section-head__title" data-i18n="sources.title">
+              Bilim qaysi ko'rinishda bo'lsa ham qabul qilamiz
+            </h2>
+          </div>
+        </div>
+
+        <div class="marquee" data-marquee aria-hidden="true">
+          <div class="marquee__track" data-marquee-track>
+            <span class="fchip"><svg class="icon"><use href="#i-headphones" /></svg>Audio · MP3 / M4A</span>
+            <span class="fchip"><svg class="icon"><use href="#i-video" /></svg>Video</span>
+            <span class="fchip"><svg class="icon"><use href="#i-file" /></svg>PDF</span>
+            <span class="fchip"><svg class="icon"><use href="#i-file" /></svg>Word</span>
+            <span class="fchip"><svg class="icon"><use href="#i-slides" /></svg>PowerPoint</span>
+            <span class="fchip"><svg class="icon"><use href="#i-table" /></svg>Excel</span>
+            <span class="fchip"><svg class="icon"><use href="#i-globe" /></svg>Veb-sahifa</span>
+            <span class="fchip"><svg class="icon"><use href="#i-chat" /></svg>Matn</span>
+          </div>
+        </div>
+
+        <ul class="sr-only">
+          <li>Audio MP3 M4A</li>
+          <li>Video</li>
+          <li>PDF</li>
+          <li>Word</li>
+          <li>PowerPoint</li>
+          <li>Excel</li>
+          <li>Veb-sahifa</li>
+          <li>Matn</li>
+        </ul>
+
+        <div class="container">
+          <p class="sources__text" data-reveal data-i18n="sources.text">
+            Audio va videodan nutq matnga o'giriladi, taqdimotdan slaydlar rasm sifatida saqlanadi,
+            jadvallardan tuzilmali ma'lumot olinadi. Har bir bo'lakning qayerdan olingani — fayl,
+            sahifa, daqiqa — yozib qo'yiladi.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 7. SHABLON → TAYYOR FAYL ============ -->
+      <section class="section section--soft templates" id="templates">
+        <div class="container">
+          <div class="templates__layout">
+            <div class="templates__text">
+              <div class="section-head" data-reveal>
+                <p class="eyebrow"><span data-i18n="templates.eyebrow">Amaliy foyda</span></p>
+                <h2 class="section-head__title" data-i18n="templates.title">Javob emas, tayyor hujjat</h2>
+                <p class="section-head__text" data-i18n="templates.text">
+                  Savolingiz shablonga tegishli bo'lsa — masalan biznes-reja, hisob-kitob jadvali,
+                  tahlil formasi — tizim shablonni sizning ma'lumotingiz bilan to'ldirib, tayyor
+                  faylni yuboradi. Nusxa ko'chirib o'tirish shart emas.
+                </p>
+              </div>
+
+              <ul class="templates__list" data-reveal-group>
+                <li><svg class="icon"><use href="#i-check" /></svg><span data-i18n="templates.l1">Biznes-reja shabloni</span></li>
+                <li><svg class="icon"><use href="#i-check" /></svg><span data-i18n="templates.l2">Hisob-kitob jadvali</span></li>
+                <li><svg class="icon"><use href="#i-check" /></svg><span data-i18n="templates.l3">Gipoteza va tahlil formasi</span></li>
+              </ul>
+            </div>
+
+            <div class="templates__visual" data-reveal>
+              <div class="filecard">
+                <div class="filecard__msg">
+                  <p data-i18n="templates.msg">
+                    Hisob-kitobni jadvalga tushirib berdim — ochib to'ldirishingiz mumkin.
+                  </p>
+                </div>
+                <div class="filecard__file" data-file-card>
+                  <span class="filecard__ico"><svg class="icon"><use href="#i-table" /></svg></span>
+                  <span class="filecard__meta">
+                    <b>gipoteza_desk.xlsx</b>
+                    <i data-i18n="templates.fileSize">24 KB · Excel</i>
+                  </span>
+                  <span class="filecard__dl"><svg class="icon"><use href="#i-arrow-right" /></svg></span>
+                </div>
+                <div class="sheet" aria-hidden="true">
+                  <div class="sheet__row sheet__row--head">
+                    <span>Gipoteza</span><span>Xarajat</span><span>Natija</span>
+                  </div>
+                  <div class="sheet__row"><span>Sinov guruhi</span><span>1 200 000</span><span class="is-ok">+</span></div>
+                  <div class="sheet__row"><span>Reklama testi</span><span>800 000</span><span class="is-no">—</span></div>
+                  <div class="sheet__row"><span>Jonli suhbat</span><span>0</span><span class="is-ok">+</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 8. KIMGA MO'LJALLANGAN ============ -->
+      <section class="section audience" id="audience">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow"><span data-i18n="audience.eyebrow">Auditoriya</span></p>
+            <h2 class="section-head__title" data-i18n="audience.title">Kimga mo'ljallangan</h2>
+          </div>
+
+          <div class="tabs" data-tabs data-reveal>
+            <div class="tabs__nav" role="tablist" aria-label="Auditoriya">
+              <button
+                class="tabs__btn is-active"
+                type="button"
+                role="tab"
+                id="tab-1"
+                aria-controls="panel-1"
+                aria-selected="true"
+                data-tab="1"
+              >
+                <svg class="icon"><use href="#i-user" /></svg>
+                <span data-i18n="audience.t1">Tadbirkor</span>
+              </button>
+              <button
+                class="tabs__btn"
+                type="button"
+                role="tab"
+                id="tab-2"
+                aria-controls="panel-2"
+                aria-selected="false"
+                tabindex="-1"
+                data-tab="2"
+              >
+                <svg class="icon"><use href="#i-spark" /></svg>
+                <span data-i18n="audience.t2">Ekspert / murabbiy</span>
+              </button>
+              <button
+                class="tabs__btn"
+                type="button"
+                role="tab"
+                id="tab-3"
+                aria-controls="panel-3"
+                aria-selected="false"
+                tabindex="-1"
+                data-tab="3"
+              >
+                <svg class="icon"><use href="#i-council" /></svg>
+                <span data-i18n="audience.t3">Kompaniya</span>
+              </button>
+              <span class="tabs__pill" data-tabs-pill aria-hidden="true"></span>
+            </div>
+
+            <div class="tabs__panels">
+              <div class="tabs__panel is-active" role="tabpanel" id="panel-1" aria-labelledby="tab-1" data-panel="1">
+                <h3 data-i18n="audience.p1t">Ustoz darslaridan chiqmagan holda javob</h3>
+                <ul>
+                  <li><svg class="icon"><use href="#i-check" /></svg><span data-i18n="audience.p1a">Javob faqat siz o'qigan manbadan olinadi — chetdan emas</span></li>
+                  <li><svg class="icon"><use href="#i-check" /></svg><span data-i18n="audience.p1b">Uzun nazariya emas, amaliy qadamlar</span></li>
+                  <li><svg class="icon"><use href="#i-check" /></svg><span data-i18n="audience.p1c">Telegramda, istalgan vaqtda</span></li>
+                </ul>
+              </div>
+
+              <div class="tabs__panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" data-panel="2" hidden>
+                <h3 data-i18n="audience.p2t">Bilimingiz bir vaqtda mingga yetadi</h3>
+                <ul>
+                  <li><svg class="icon"><use href="#i-check" /></svg><span data-i18n="audience.p2a">Bilimingiz 1000 odamga bir vaqtda yetadi</span></li>
+                  <li><svg class="icon"><use href="#i-check" /></svg><span data-i18n="audience.p2b">Xarakteringiz va uslubingiz saqlanadi</span></li>
+                  <li><svg class="icon"><use href="#i-check" /></svg><span data-i18n="audience.p2c">Kim nima so'raganini statistikada ko'rasiz</span></li>
+                  <li><svg class="icon"><use href="#i-check" /></svg><span data-i18n="audience.p2d">Obunadan daromad</span></li>
+                </ul>
+              </div>
+
+              <div class="tabs__panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" data-panel="3" hidden>
+                <h3 data-i18n="audience.p3t">Kompaniya bilimi bitta bazada</h3>
+                <ul>
+                  <li><svg class="icon"><use href="#i-check" /></svg><span data-i18n="audience.p3a">Ichki qoidalar, reglament va treninglar bitta bazada</span></li>
+                  <li><svg class="icon"><use href="#i-check" /></svg><span data-i18n="audience.p3b">Yangi xodim savoliga AI javob beradi — rahbar vaqti tejaladi</span></li>
+                  <li><svg class="icon"><use href="#i-check" /></svg><span data-i18n="audience.p3c">Kim qaysi bilimga kira olishi ruxsat matritsasi bilan boshqariladi</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ HAMKORLAR ============ -->
+      <!-- Ro'yxat `public/partners.json` dan o'qiladi. Bo'sh bo'lsa bo'lim
+           JS tomonidan butunlay olib tashlanadi, shuning uchun boshda yashirin. -->
+      <section class="section section--tight section--soft partners" id="partners" hidden>
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow"><span data-i18n="partners.eyebrow">Hamkorlar</span></p>
+            <h2 class="section-head__title" data-i18n="partners.title">Biz bilan ishlayotganlar</h2>
+          </div>
+        </div>
+
+        <div class="partners__rows" data-reveal>
+          <div class="partners__marquee">
+            <div class="partners__track" data-partners-track="1"></div>
+          </div>
+          <div class="partners__marquee" data-partners-row2 hidden>
+            <div class="partners__track partners__track--reverse" data-partners-track="2"></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============ 9. EKSPERTLAR UCHUN ============ -->
+      <section class="section experts" id="experts">
+        <span class="glow-orb experts__orb" aria-hidden="true"></span>
+        <div class="container">
+          <div class="experts__layout">
+            <div class="experts__text">
+              <div class="section-head" data-reveal>
+                <p class="eyebrow"><span data-i18n="experts.eyebrow">Ekspertlarga</span></p>
+                <h2 class="section-head__title" data-i18n="experts.title">
+                  O'z raqamli egizagingizni yarating
+                </h2>
+              </div>
+
+              <ol class="experts__steps" data-reveal-group>
+                <li>
+                  <b>1</b>
+                  <span data-i18n="experts.s1">Bilimingizni yuklaysiz — biz yordam beramiz</span>
+                </li>
+                <li>
+                  <b>2</b>
+                  <span data-i18n="experts.s2">Xarakter va uslubni sozlaysiz: qanday gapirishi, nimani aytmasligi</span>
+                </li>
+                <li>
+                  <b>3</b>
+                  <span data-i18n="experts.s3">Egizak ishga tushadi, siz kabinetdan hammasini kuzatasiz</span>
+                </li>
+              </ol>
+            </div>
+
+            <div class="experts__form-wrap" data-reveal>
+              <form class="eform" data-form novalidate>
+                <h3 class="eform__title" data-i18n="experts.formTitle">Ariza qoldirish</h3>
+
+                <div class="field">
+                  <label for="f-name" data-i18n="experts.fName">Ism</label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" required data-i18n-placeholder="experts.fNamePh" placeholder="Ismingiz" />
+                  <small class="field__err" data-err-for="name"></small>
+                </div>
+
+                <div class="field">
+                  <label for="f-contact" data-i18n="experts.fContact">Telegram yoki telefon</label>
+                  <input id="f-contact" name="contact" type="text" autocomplete="tel" required data-i18n-placeholder="experts.fContactPh" placeholder="@username yoki +998 __ ___ __ __" />
+                  <small class="field__err" data-err-for="contact"></small>
+                </div>
+
+                <div class="field">
+                  <label for="f-area" data-i18n="experts.fArea">Yo'nalish</label>
+                  <input id="f-area" name="area" type="text" required data-i18n-placeholder="experts.fAreaPh" placeholder="Masalan: biznes, marketing, ta'lim" />
+                  <small class="field__err" data-err-for="area"></small>
+                </div>
+
+                <div class="field">
+                  <label for="f-volume" data-i18n="experts.fVolume">Bilim hajmi (taxminan)</label>
+                  <select id="f-volume" name="volume">
+                    <option value="<10" data-i18n="experts.v1">10 soatgacha material</option>
+                    <option value="10-50" data-i18n="experts.v2">10–50 soat</option>
+                    <option value="50+" data-i18n="experts.v3">50 soatdan ko'p</option>
+                    <option value="unknown" data-i18n="experts.v4">Hali aniq emas</option>
+                  </select>
+                </div>
+
+                <button class="btn btn--primary btn--block" type="submit" data-form-submit>
+                  <span data-i18n="experts.submit">Ariza qoldirish</span>
+                </button>
+
+                <p class="eform__note" data-i18n="experts.note">24 soat ichida bog'lanamiz.</p>
+
+                <div class="eform__status" data-form-status role="status" aria-live="polite" hidden></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 10. XAVFSIZLIK ============ -->
+      <section class="section section--tight section--soft" id="security">
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow"><span data-i18n="security.eyebrow">Nazorat</span></p>
+            <h2 class="section-head__title" data-i18n="security.title">Xavfsizlik va chegara</h2>
+          </div>
+
+          <div class="grid grid--4" data-reveal-group>
+            <article class="card card--hover">
+              <span class="card__icon"><svg class="icon"><use href="#i-lock" /></svg></span>
+              <h3 class="card__title" data-i18n="security.c1t">Bilimingiz sizniki</h3>
+              <p class="card__text" data-i18n="security.c1d">
+                Yuklangan materiallar faqat sizning egizagingiz uchun ishlatiladi.
+              </p>
+            </article>
+            <article class="card card--hover">
+              <span class="card__icon"><svg class="icon"><use href="#i-compass" /></svg></span>
+              <h3 class="card__title" data-i18n="security.c2t">Chegara aniq</h3>
+              <p class="card__text" data-i18n="security.c2d">
+                Egizak faqat unga ruxsat etilgan bilimdan javob beradi — boshqasidan emas.
+              </p>
+            </article>
+            <article class="card card--hover">
+              <span class="card__icon"><svg class="icon"><use href="#i-eye" /></svg></span>
+              <h3 class="card__title" data-i18n="security.c3t">Har javob tekshiriladi</h3>
+              <p class="card__text" data-i18n="security.c3d">
+                Manbasi yo'q jumla javobga tushmaydi.
+              </p>
+            </article>
+            <article class="card card--hover">
+              <span class="card__icon"><svg class="icon"><use href="#i-globe" /></svg></span>
+              <h3 class="card__title" data-i18n="security.c4t">O'zbek tilida</h3>
+              <p class="card__text" data-i18n="security.c4d">
+                Savol ham, javob ham, manba ham o'zbekcha.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 11. NARXLAR ============ -->
+      <section class="section pricing" id="pricing">
+        <span class="glow-orb pricing__orb" aria-hidden="true"></span>
+        <div class="container">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow"><span data-i18n="pricing.eyebrow">Tariflar</span></p>
+            <h2 class="section-head__title" data-i18n="pricing.title">
+              Avval sinab ko'ring — keyin tanlang
+            </h2>
+          </div>
+
+          <div class="pricing__grid" data-reveal-group>
+            <article class="plan">
+              <h3 class="plan__name" data-i18n="pricing.p1name">Bepul</h3>
+              <p class="plan__price" data-i18n="pricing.free">0 so'm</p>
+              <p class="plan__sub" data-i18n="pricing.p1sub">Tanishib chiqish uchun</p>
+              <ul class="plan__list">
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f1">3 ta savol</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f2">1 ta egizak</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f3">Manba isboti</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f4">Suhbat tarixi</span></li>
+                <li class="is-off"><svg class="icon"><use href="#i-close" /></svg><span data-i18n="pricing.f5">Tayyor fayl</span></li>
+              </ul>
+              <a class="btn btn--ghost btn--block" href="#" data-bot-link="pricing_free">
+                <span data-i18n="pricing.cta1">Bepul boshlash</span>
+              </a>
+            </article>
+
+            <article class="plan">
+              <h3 class="plan__name" data-i18n="pricing.p2name">Shaxsiy</h3>
+              <p class="plan__price plan__price--text" data-price="personal" data-i18n="pricing.soon">
+                Tez orada
+              </p>
+              <p class="plan__sub" data-i18n="pricing.p2sub">Doimiy foydalanish uchun</p>
+              <ul class="plan__list">
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f6">Oylik limit</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f2">1 ta egizak</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f3">Manba isboti</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f5">Tayyor fayl</span></li>
+                <li class="is-off"><svg class="icon"><use href="#i-close" /></svg><span data-i18n="pricing.f7">Ustuvor navbat</span></li>
+              </ul>
+              <a class="btn btn--ghost btn--block" href="#" data-bot-link="pricing_personal">
+                <span data-i18n="pricing.cta2">Tanlash</span>
+              </a>
+            </article>
+
+            <article class="plan plan--featured">
+              <span class="plan__tag" data-i18n="pricing.popular">Ko'p tanlanadi</span>
+              <h3 class="plan__name" data-i18n="pricing.p3name">Pro</h3>
+              <p class="plan__price plan__price--text" data-price="pro" data-i18n="pricing.soon">
+                Tez orada
+              </p>
+              <p class="plan__sub" data-i18n="pricing.p3sub">Kundalik ishlaydiganlar uchun</p>
+              <ul class="plan__list">
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f8">Kengaytirilgan limit</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f9">Barcha egizaklar</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f3">Manba isboti</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f5">Tayyor fayl</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f7">Ustuvor navbat</span></li>
+              </ul>
+              <a class="btn btn--primary btn--block" href="#" data-bot-link="pricing_pro">
+                <span data-i18n="pricing.cta2">Tanlash</span>
+              </a>
+            </article>
+
+            <article class="plan">
+              <h3 class="plan__name" data-i18n="pricing.p4name">Kompaniya</h3>
+              <p class="plan__price plan__price--text" data-price="company" data-i18n="pricing.contactUs">
+                Aloqaga chiqing
+              </p>
+              <p class="plan__sub" data-i18n="pricing.p4sub">Jamoa va bo'limlar uchun</p>
+              <ul class="plan__list">
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f10">Kelishuv asosida limit</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f11">Shaxsiy egizak</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f12">Ruxsat matritsasi</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f5">Tayyor fayl</span></li>
+                <li class="is-on"><svg class="icon"><use href="#i-check" /></svg><span data-i18n="pricing.f7">Ustuvor navbat</span></li>
+              </ul>
+              <a class="btn btn--ghost btn--block" href="#experts">
+                <span data-i18n="pricing.cta3">Aloqaga chiqish</span>
+              </a>
+            </article>
+          </div>
+
+          <div class="pricing__foot" data-reveal>
+            <div class="pay">
+              <span data-i18n="pricing.payLabel">To'lov:</span>
+              <b class="pay__logo">Click</b>
+              <b class="pay__logo">Payme</b>
+            </div>
+            <p data-i18n="pricing.note1">
+              Limit foydalanish hajmiga qarab hisoblanadi — ishlatmasangiz sarflanmaydi.
+            </p>
+            <p data-i18n="pricing.note2">Istalgan vaqtda bekor qilasiz.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 12. FAQ ============ -->
+      <section class="section section--soft faq" id="faq">
+        <div class="container container--narrow">
+          <div class="section-head section-head--center" data-reveal>
+            <p class="eyebrow"><span data-i18n="faq.eyebrow">Savol-javob</span></p>
+            <h2 class="section-head__title" data-i18n="faq.title">Ko'p so'raladigan savollar</h2>
+          </div>
+
+          <div class="acc" data-accordion data-reveal-group>
+            <div class="acc__item">
+              <h3>
+                <button class="acc__btn" type="button" aria-expanded="false">
+                  <span data-i18n="faq.q1">Bu oddiy ChatGPT'dan nimasi bilan farq qiladi?</span>
+                  <i aria-hidden="true"></i>
+                </button>
+              </h3>
+              <div class="acc__panel"><p data-i18n="faq.a1">
+                Javob faqat yuklangan manbadan olinadi va har bir fikr manbaga bog'lanadi —
+                javobni o'zingiz tekshirib ko'ra olasiz.
+              </p></div>
+            </div>
+
+            <div class="acc__item">
+              <h3>
+                <button class="acc__btn" type="button" aria-expanded="false">
+                  <span data-i18n="faq.q2">Ustozning aynan gapini eshita olamanmi?</span>
+                  <i aria-hidden="true"></i>
+                </button>
+              </h3>
+              <div class="acc__panel"><p data-i18n="faq.a2">
+                Ha. Javobdagi havolani bossangiz, dars yozuvining aynan o'sha qismi ochiladi.
+              </p></div>
+            </div>
+
+            <div class="acc__item">
+              <h3>
+                <button class="acc__btn" type="button" aria-expanded="false">
+                  <span data-i18n="faq.q3">Bilimim boshqalarga o'tib ketmaydimi?</span>
+                  <i aria-hidden="true"></i>
+                </button>
+              </h3>
+              <div class="acc__panel"><p data-i18n="faq.a3">
+                Yo'q. Har egizakning bilimi ajratilgan va ruxsat matritsasi bilan boshqariladi.
+              </p></div>
+            </div>
+
+            <div class="acc__item">
+              <h3>
+                <button class="acc__btn" type="button" aria-expanded="false">
+                  <span data-i18n="faq.q4">Ro'yxatdan qanday o'taman?</span>
+                  <i aria-hidden="true"></i>
+                </button>
+              </h3>
+              <div class="acc__panel"><p data-i18n="faq.a4">
+                Telegram orqali, bir bosishda. Alohida parol kerak emas.
+              </p></div>
+            </div>
+
+            <div class="acc__item">
+              <h3>
+                <button class="acc__btn" type="button" aria-expanded="false">
+                  <span data-i18n="faq.q5">Qaysi tillarda ishlaydi?</span>
+                  <i aria-hidden="true"></i>
+                </button>
+              </h3>
+              <div class="acc__panel"><p data-i18n="faq.a5">
+                O'zbek tili asosiy. Rus va ingliz tilidagi manbalardan ham o'qiy oladi.
+              </p></div>
+            </div>
+
+            <div class="acc__item">
+              <h3>
+                <button class="acc__btn" type="button" aria-expanded="false">
+                  <span data-i18n="faq.q6">Javob qancha vaqtda keladi?</span>
+                  <i aria-hidden="true"></i>
+                </button>
+              </h3>
+              <div class="acc__panel"><p data-i18n="faq.a6">
+                Oddiy savolga tez javob beradi. Chuqur tahlil talab qiladiganiga bir necha o'n
+                soniya ketadi — kengash bosqichma-bosqich ishlaydi va jarayon jonli ko'rinadi.
+              </p></div>
+            </div>
+
+            <div class="acc__item">
+              <h3>
+                <button class="acc__btn" type="button" aria-expanded="false">
+                  <span data-i18n="faq.q7">Xato javob bersa-chi?</span>
+                  <i aria-hidden="true"></i>
+                </button>
+              </h3>
+              <div class="acc__panel"><p data-i18n="faq.a7">
+                Har javobda manba bor — darrov tekshirasiz. Xato haqida bitta bosishda xabar
+                berasiz, u tuzatishga tushadi.
+              </p></div>
+            </div>
+
+            <div class="acc__item">
+              <h3>
+                <button class="acc__btn" type="button" aria-expanded="false">
+                  <span data-i18n="faq.q8">To'lovni qanday qilaman?</span>
+                  <i aria-hidden="true"></i>
+                </button>
+              </h3>
+              <div class="acc__panel"><p data-i18n="faq.a8">
+                Click yoki Payme orqali. Obuna avtomatik uzaymaydi — o'zingiz tasdiqlaysiz.
+              </p></div>
+            </div>
+
+            <div class="acc__item">
+              <h3>
+                <button class="acc__btn" type="button" aria-expanded="false">
+                  <span data-i18n="faq.q9">Bilimimni o'chira olamanmi?</span>
+                  <i aria-hidden="true"></i>
+                </button>
+              </h3>
+              <div class="acc__panel"><p data-i18n="faq.a9">
+                Ha. Kabinetdan istalgan manbani o'chirasiz — u bilan birga undan olingan javob
+                asoslari ham chiqib ketadi.
+              </p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 13. YAKUNIY CTA ============ -->
+      <section class="section cta" id="cta">
+        <div class="container">
+          <div class="cta__box" data-reveal>
+            <span class="cta__orb" aria-hidden="true"></span>
+            <h2 class="cta__title" data-i18n="cta.title">
+              3 ta savolingizni bepul bering — farqini o'zingiz ko'rasiz
+            </h2>
+            <p class="cta__text" data-i18n="cta.text">
+              Ro'yxatdan o'tish, karta biriktirish shart emas. Telegramda bir bosishda boshlanadi.
+            </p>
+            <div class="cta__actions">
+              <a class="btn btn--primary btn--lg" href="#" data-bot-link="landing_final" data-magnetic>
+                <svg class="icon"><use href="#i-telegram" /></svg>
+                <span data-i18n="cta.primary">Telegramda boshlash</span>
+              </a>
+              <a class="btn btn--ghost btn--lg" href="#experts">
+                <span data-i18n="cta.secondary">Ekspert sifatida qo'shilish</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ 14. FOOTER ============ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <img src="/logos/bms-wordmark-dark.svg" alt="BMS Lab" width="140" height="43" />
+            <p data-i18n="footer.about">
+              Ekspert bilimini raqamli egizakka aylantiramiz — javob manbaga tayanadi, har bir
+              fikrni tekshirib ko'rish mumkin.
+            </p>
+          </div>
+
+          <nav class="footer__col" aria-label="Bo'limlar">
+            <h3 data-i18n="footer.sections">Bo'limlar</h3>
+            <a href="#proof" data-i18n="nav.proof">Manba isboti</a>
+            <a href="#how" data-i18n="nav.how">Qanday ishlaydi</a>
+            <a href="#council" data-i18n="nav.council">Kengash</a>
+            <a href="#pricing" data-i18n="nav.pricing">Narxlar</a>
+            <a href="#faq" data-i18n="nav.faq">Savollar</a>
+          </nav>
+
+          <div class="footer__col">
+            <h3 data-i18n="footer.contact">Aloqa</h3>
+            <a href="tel:+998974007090" data-contact="phone">
+              <svg class="icon"><use href="#i-phone" /></svg>+998 97 400 70 90
+            </a>
+            <a href="mailto:bmslabgroup@gmail.com" data-contact="email">
+              <svg class="icon"><use href="#i-mail" /></svg>bmslabgroup@gmail.com
+            </a>
+            <a href="#" data-bot-link="footer">
+              <svg class="icon"><use href="#i-telegram" /></svg>Telegram
+            </a>
+            <p class="footer__addr">
+              <svg class="icon"><use href="#i-pin" /></svg>
+              <span data-contact="address">
+                Toshkent shahar, Mirzo Ulug'bek tumani, Olmachi MFY, Parkent ko'chasi, 199a-uy
+              </span>
+            </p>
+          </div>
+
+          <nav class="footer__col" aria-label="Hujjatlar">
+            <h3 data-i18n="footer.legal">Hujjatlar</h3>
+            <a href="#" data-legal data-i18n="footer.offer">Ommaviy oferta</a>
+            <a href="#" data-legal data-i18n="footer.privacy">Maxfiylik siyosati</a>
+            <a href="#" data-legal data-i18n="footer.refund">Qaytarish shartlari</a>
+          </nav>
+        </div>
+
+        <hr class="divider-line" />
+
+        <div class="footer__bottom">
+          <p>© <span data-year>2026</span> BMS Lab. <span data-i18n="footer.rights">Barcha huquqlar himoyalangan.</span></p>
+          <p class="footer__made" data-i18n="footer.made">Toshkentda ishlangan</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ DEMO MODAL ============ -->
+    <div class="modal" data-modal hidden>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div
+        class="modal__box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+        data-lenis-prevent
+      >
+        <button class="modal__x" type="button" data-modal-close aria-label="Yopish">
+          <svg class="icon"><use href="#i-close" /></svg>
+        </button>
+        <h2 class="modal__title" id="modal-title" data-i18n="modal.title">Qanday ishlaydi</h2>
+        <div class="modal__body" data-modal-body>
+          <div class="modal__placeholder">
+            <svg class="icon"><use href="#i-video" /></svg>
+            <p data-i18n="modal.soon">
+              Demo video tayyorlanmoqda. Hozircha Telegramda o'zingiz sinab ko'rishingiz mumkin —
+              3 ta savol bepul.
+            </p>
+            <a class="btn btn--primary" href="#" data-bot-link="demo_modal">
+              <svg class="icon"><use href="#i-telegram" /></svg>
+              <span data-i18n="modal.cta">Telegramda sinash</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://bmslab.uz/#org",
+            "name": "BMS Lab",
+            "url": "https://bmslab.uz/",
+            "logo": "https://bmslab.uz/favicon.svg",
+            "email": "bmslabgroup@gmail.com",
+            "telephone": "+998974007090",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Parkent ko'chasi, 199a-uy",
+              "addressLocality": "Toshkent",
+              "addressRegion": "Mirzo Ulug'bek tumani",
+              "addressCountry": "UZ"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "BMS Lab — raqamli egizak",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web, Telegram",
+            "url": "https://bmslab.uz/",
+            "publisher": { "@id": "https://bmslab.uz/#org" },
+            "inLanguage": ["uz", "ru"],
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "UZS",
+              "description": "3 ta savol bepul"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Bu oddiy ChatGPT'dan nimasi bilan farq qiladi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Javob faqat yuklangan manbadan olinadi va har bir fikr manbaga bog'lanadi — javobni o'zingiz tekshirib ko'ra olasiz."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ustozning aynan gapini eshita olamanmi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ha. Javobdagi havolani bossangiz, dars yozuvining aynan o'sha qismi ochiladi."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Bilimim boshqalarga o'tib ketmaydimi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yo'q. Har egizakning bilimi ajratilgan va ruxsat matritsasi bilan boshqariladi."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ro'yxatdan qanday o'taman?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Telegram orqali, bir bosishda. Alohida parol kerak emas."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Qaysi tillarda ishlaydi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "O'zbek tili asosiy. Rus va ingliz tilidagi manbalardan ham o'qiy oladi."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "To'lovni qanday qilaman?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Click yoki Payme orqali. Obuna avtomatik uzaymaydi — o'zingiz tasdiqlaysiz."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </body>
+</html>

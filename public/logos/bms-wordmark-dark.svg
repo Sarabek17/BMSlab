@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 140" width="560" height="140" role="img" aria-label="BMS Lab">
+  <g stroke="#0F172A" stroke-width="7" stroke-linecap="round">
+    <line x1="52" y1="22" x2="52" y2="36"/>
+    <line x1="76" y1="22" x2="76" y2="36"/>
+    <line x1="100" y1="22" x2="100" y2="36"/>
+    <line x1="52" y1="104" x2="52" y2="118"/>
+    <line x1="76" y1="104" x2="76" y2="118"/>
+    <line x1="100" y1="104" x2="100" y2="118"/>
+    <line x1="18" y1="46" x2="32" y2="46"/>
+    <line x1="18" y1="70" x2="32" y2="70"/>
+    <line x1="18" y1="94" x2="32" y2="94"/>
+    <line x1="120" y1="46" x2="134" y2="46"/>
+    <line x1="120" y1="70" x2="134" y2="70"/>
+    <line x1="120" y1="94" x2="134" y2="94"/>
+  </g>
+  <rect x="32" y="36" width="88" height="68" rx="14" fill="none" stroke="#0F172A" stroke-width="8"/>
+  <rect x="60" y="56" width="32" height="28" rx="6" fill="#22D3EE"/>
+  <text x="166" y="94" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="64" letter-spacing="3" fill="#0F172A">BMS<tspan fill="#0E8EA6"> Lab</tspan></text>
+</svg>

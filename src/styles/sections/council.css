@@ -1,0 +1,222 @@
+/* Blok 5 — direktorlar kengashi (orbit) */
+
+.council {
+  position: relative;
+  overflow: hidden;
+}
+
+.council__orb {
+  width: min(60vw, 620px);
+  aspect-ratio: 1;
+  top: 12%;
+  right: -12%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.13), transparent 68%);
+}
+
+.council__layout {
+  display: grid;
+  gap: clamp(40px, 6vw, 60px);
+  align-items: center;
+}
+
+.council__extra {
+  padding: 16px 20px;
+  border-radius: var(--r-md);
+  border-left: 3px solid var(--accent);
+  background: var(--accent-tint);
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.council__active {
+  margin-top: 20px;
+  min-height: 74px;
+  padding: 16px 20px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+.council__active b {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--accent-strong);
+  font-size: 0.95rem;
+}
+
+.council__active span {
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+}
+
+/* Orbit */
+.council__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.orbit {
+  position: relative;
+  display: grid;
+  place-items: center;
+  /* O'lchamlar piksel bilan beriladi: `translate()` dagi foiz elementning
+     o'z kengligiga nisbatan hisoblanadi, ota-elementga emas. */
+  --size: min(440px, 88vw);
+  --node: 84px;
+  --r: calc((var(--size) - var(--node)) / 2 - 8px);
+  width: var(--size);
+  aspect-ratio: 1;
+}
+
+.orbit__ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px dashed #d7dde6;
+}
+
+.orbit__ring--1 {
+  inset: 12%;
+}
+
+.orbit__ring--2 {
+  inset: 26%;
+  border-style: solid;
+  border-color: #e6eaf0;
+}
+
+.orbit__center {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 32%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--navy);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.22);
+}
+
+.orbit__center::before {
+  content: '';
+  position: absolute;
+  inset: -6%;
+  border-radius: 50%;
+  border: 1px solid rgba(14, 142, 166, 0.45);
+  animation: pulse-ring 3.4s var(--ease) infinite;
+}
+
+.orbit__center-inner {
+  display: grid;
+  place-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.orbit__center-inner .icon {
+  width: 22px;
+  height: 22px;
+  color: var(--accent-bright);
+}
+
+.orbit__center-inner b {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.orbit__nodes {
+  position: absolute;
+  inset: 0;
+}
+
+.orbit__node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  gap: 4px;
+  width: var(--node);
+  height: var(--node);
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+  color: var(--text-muted);
+  text-align: center;
+  /* --i: 0..5 → 60° qadam, 90° dan boshlanadi (yuqoridan) */
+  --a: calc(var(--i) * 60deg - 90deg);
+  transform: translate(-50%, -50%) rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a)));
+  transition:
+    border-color 0.35s var(--ease),
+    background-color 0.35s var(--ease),
+    color 0.35s var(--ease),
+    box-shadow 0.35s var(--ease);
+}
+
+.orbit__node .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.orbit__node span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.orbit__node:hover,
+.orbit__node.is-active {
+  border-color: var(--accent);
+  background: var(--accent-tint);
+  color: var(--text);
+  box-shadow: var(--shadow-accent);
+}
+
+.orbit__node:hover .icon,
+.orbit__node.is-active .icon {
+  color: var(--accent);
+}
+
+/* Markazdan rollarga ketuvchi chiziqlar */
+.orbit__spokes {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.orbit__spokes line {
+  stroke: #b9c2ce;
+  stroke-width: 0.5;
+  stroke-linecap: round;
+}
+
+/* Tashqi halqa sekin aylanadi — matnli elementlar qimirlamaydi */
+.orbit__ring--1 {
+  animation: orbit-spin 46s linear infinite;
+}
+
+@media (min-width: 420px) {
+  .orbit {
+    --node: 94px;
+  }
+  .orbit__node span {
+    font-size: 0.72rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .council__layout {
+    grid-template-columns: 1fr 1fr;
+  }
+  .orbit {
+    --size: 460px;
+    --node: 98px;
+  }
+}

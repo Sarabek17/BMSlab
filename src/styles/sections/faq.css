@@ -1,0 +1,87 @@
+/* Blok 12 — FAQ akkordeon */
+
+.acc {
+  display: grid;
+  gap: 10px;
+}
+
+.acc__item {
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  background: #ffffff;
+  overflow: hidden;
+  transition:
+    border-color 0.35s var(--ease),
+    box-shadow 0.35s var(--ease);
+}
+
+.acc__item.is-open {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.acc__item h3 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: normal;
+}
+
+.acc__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  padding: 19px 20px;
+  text-align: left;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  transition: color 0.3s var(--ease);
+}
+
+.acc__btn:hover {
+  color: var(--accent-strong);
+}
+
+.acc__btn i {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+
+.acc__btn i::before,
+.acc__btn i::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  translate: -50% -50%;
+  transition: transform 0.4s var(--ease);
+}
+
+.acc__btn i::after {
+  transform: rotate(90deg);
+}
+
+.acc__btn[aria-expanded='true'] i::after {
+  transform: rotate(0deg);
+}
+
+.acc__panel {
+  height: 0;
+  overflow: hidden;
+}
+
+.acc__panel p {
+  padding: 0 20px 20px;
+  color: var(--text-muted);
+  line-height: 1.72;
+}

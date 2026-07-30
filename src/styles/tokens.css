@@ -1,0 +1,83 @@
+/* Dizayn tokenlari — och (light) tema, ko'zni charchatmaydigan yumshoq ranglar */
+
+:root {
+  /* Fon qatlamlari */
+  --bg: #ffffff;
+  --bg-soft: #f7f8fa; /* almashinuvchi bo'limlar */
+  --surface: #ffffff; /* kartalar */
+  --surface-2: #f7f8fa;
+  --surface-3: #eef1f5;
+
+  /* Chegaralar */
+  --border: #e2e5ea;
+  --border-strong: #d2d8e0;
+  --border-accent: #a9e4ef;
+
+  /* Matn — to'q, lekin qora emas: uzoq o'qishda yumshoqroq */
+  --text: #101828;
+  --text-muted: #5b6473;
+  --text-dim: #8a94a3;
+  --text-on-dark: #f4f7fb;
+
+  /* Brend: logotipdagi navy + cyan */
+  --navy: #0f172a;
+  --navy-soft: #1e293b;
+  --accent: #0e8ea6; /* oq fonda o'qiladigan cyan */
+  --accent-strong: #0b7488;
+  --accent-bright: #22d3ee; /* to'ldirish va urg'u uchun */
+  --accent-tint: #eefbfe; /* juda och cyan fon */
+  --indigo: #4f5bd5;
+  --indigo-tint: #eef0fd;
+
+  --gradient: linear-gradient(135deg, #0e8ea6 0%, #4f5bd5 100%);
+  --gradient-bright: linear-gradient(135deg, #22d3ee 0%, #6b7cf0 100%);
+  --gradient-soft: linear-gradient(135deg, #eefbfe 0%, #eef0fd 100%);
+
+  /* Holat ranglari */
+  --success: #0f9d70;
+  --danger: #d1495b;
+
+  /* Radius */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 26px;
+  --r-full: 999px;
+
+  /* Soyalar — yumshoq va past kontrastli */
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-md: 0 6px 20px rgba(16, 24, 40, 0.07);
+  --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.1);
+  --shadow-accent: 0 10px 26px rgba(14, 142, 166, 0.18);
+  --ring-accent: 0 0 0 3px rgba(34, 211, 238, 0.22);
+
+  /* O'lchamlar */
+  --container: 1200px;
+  --container-narrow: 880px;
+  --gutter: 20px;
+  --header-h: 72px;
+
+  --section-y: clamp(64px, 9vw, 128px);
+
+  /* Tipografika */
+  --font: 'Manrope', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --fs-display: clamp(2.1rem, 5.6vw, 3.85rem);
+  --fs-h2: clamp(1.6rem, 3.4vw, 2.6rem);
+  --fs-h3: clamp(1.12rem, 1.8vw, 1.38rem);
+  --fs-lead: clamp(1rem, 1.45vw, 1.15rem);
+  --fs-body: 1rem;
+  --fs-sm: 0.9rem;
+  --fs-xs: 0.8rem;
+
+  /* Harakat */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 0.5s;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+    --header-h: 80px;
+  }
+}

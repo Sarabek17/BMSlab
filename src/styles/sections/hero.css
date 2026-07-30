@@ -1,0 +1,519 @@
+/* Hero: sarlavha, CTA, telefon mockup */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  padding-top: calc(var(--header-h) + 44px);
+  padding-bottom: 72px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fbfcfe 0%, #ffffff 62%);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(16, 24, 40, 0.038) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 24, 40, 0.038) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 78% 58% at 50% 35%, #000 18%, transparent 76%);
+  -webkit-mask-image: radial-gradient(ellipse 78% 58% at 50% 35%, #000 18%, transparent 76%);
+}
+
+/* Fon dog'lari — och temada zo'rg'a sezilarli pastel */
+.hero__orb--1 {
+  width: min(58vw, 600px);
+  aspect-ratio: 1;
+  top: -16%;
+  left: -12%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.2), transparent 68%);
+  animation: float-slow 15s ease-in-out infinite;
+}
+
+.hero__orb--2 {
+  width: min(52vw, 540px);
+  aspect-ratio: 1;
+  top: 4%;
+  right: -14%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.16), transparent 68%);
+  animation: float-slow 19s ease-in-out infinite reverse;
+}
+
+.hero__orb--3 {
+  width: min(42vw, 440px);
+  aspect-ratio: 1;
+  bottom: -20%;
+  left: 34%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.12), transparent 70%);
+  animation: float-slow 23s ease-in-out infinite;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: clamp(44px, 6vw, 64px);
+  align-items: center;
+}
+
+.hero__content > * {
+  opacity: 0;
+}
+
+.hero__title {
+  margin-top: 20px;
+  font-size: var(--fs-display);
+  font-weight: 800;
+  letter-spacing: -0.032em;
+  line-height: 1.08;
+  color: var(--text);
+}
+
+.hero__lead {
+  max-width: 560px;
+  margin-top: 22px;
+  color: var(--text-muted);
+  font-size: var(--fs-lead);
+  line-height: 1.72;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.hero__note {
+  margin-top: 16px;
+  color: var(--text-dim);
+  font-size: var(--fs-sm);
+}
+
+/* Pastga strelka */
+.hero__scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  z-index: 2;
+  display: none;
+  translate: -50% 0;
+}
+
+.hero__scroll-line {
+  display: block;
+  width: 1px;
+  height: 52px;
+  background: linear-gradient(to bottom, transparent, var(--border-strong));
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__scroll-line::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  animation: scroll-dot 2.2s var(--ease) infinite;
+}
+
+@keyframes scroll-dot {
+  0% {
+    transform: translateY(-100%);
+  }
+  60%,
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* ---------- Telefon mockup ---------- */
+.hero__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.phone {
+  position: relative;
+  width: min(320px, 82vw);
+}
+
+.phone__glow {
+  position: absolute;
+  inset: -12% -20%;
+  background: radial-gradient(ellipse at center, rgba(34, 211, 238, 0.16), transparent 66%);
+  filter: blur(44px);
+  z-index: 0;
+}
+
+.phone__frame {
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 38px;
+  background: #e8ecf2;
+  box-shadow:
+    var(--shadow-lg),
+    inset 0 1px 0 #ffffff;
+  border: 1px solid var(--border);
+}
+
+.phone__notch {
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  translate: -50% 0;
+  width: 88px;
+  height: 19px;
+  border-radius: var(--r-full);
+  background: #cfd6e0;
+  z-index: 3;
+}
+
+.phone__screen {
+  display: flex;
+  flex-direction: column;
+  height: min(560px, 68svh);
+  min-height: 440px;
+  border-radius: 29px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.chat__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 44px 16px 12px;
+  border-bottom: 1px solid var(--border);
+  background: #fbfcfe;
+}
+
+.chat__avatar {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  background: var(--navy);
+  color: #ffffff;
+  font-size: 0.6rem;
+  font-weight: 800;
+}
+
+.chat__meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.chat__meta b {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.chat__meta i {
+  color: var(--success);
+  font-size: 0.7rem;
+  font-style: normal;
+}
+
+.chat__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 14px;
+  overflow: hidden;
+}
+
+.msg {
+  max-width: 88%;
+  padding: 11px 14px;
+  border-radius: 16px;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  opacity: 0;
+  transform: translateY(12px) scale(0.97);
+}
+
+.msg.is-shown {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.45s var(--ease-out),
+    transform 0.45s var(--ease-out);
+}
+
+.msg--out {
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+  background: var(--navy);
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.msg--in {
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.msg__cite {
+  display: inline-grid;
+  place-items: center;
+  width: 15px;
+  height: 15px;
+  margin-left: 4px;
+  border-radius: 5px;
+  background: var(--accent-tint);
+  border: 1px solid var(--border-accent);
+  color: var(--accent-strong);
+  font-size: 0.56rem;
+  font-weight: 800;
+  vertical-align: super;
+}
+
+.msg--typing {
+  align-self: flex-start;
+  display: flex;
+  gap: 4px;
+  padding: 13px 15px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  border-bottom-left-radius: 5px;
+}
+
+.msg--typing span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--text-dim);
+  animation: dot-bounce 1.3s ease-in-out infinite;
+}
+
+.msg--typing span:nth-child(2) {
+  animation-delay: 0.16s;
+}
+.msg--typing span:nth-child(3) {
+  animation-delay: 0.32s;
+}
+
+.msg--typing.is-hidden {
+  display: none;
+}
+
+.msg--source {
+  align-self: stretch;
+  max-width: 100%;
+  padding: 11px;
+  border: 1px solid var(--border-accent);
+  background: var(--accent-tint);
+}
+
+.src {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.src__badge {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  flex: none;
+  border-radius: 8px;
+  background: #d5f4fa;
+  color: var(--accent-strong);
+}
+
+.src__badge .icon {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.6;
+}
+
+.src__info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.3;
+}
+
+.src__info b {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.src__info i {
+  color: var(--accent-strong);
+  font-size: 0.68rem;
+  font-style: normal;
+  font-variant-numeric: tabular-nums;
+}
+
+.src__play {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex: none;
+  margin-left: auto;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.src__play .icon {
+  width: 12px;
+  height: 12px;
+  margin-left: 1px;
+}
+
+.src__wave {
+  display: flex;
+  align-items: center;
+  gap: 2.5px;
+  height: 22px;
+  margin-top: 9px;
+}
+
+.src__wave span {
+  flex: 1;
+  border-radius: 2px;
+  background: rgba(14, 142, 166, 0.42);
+  animation: wave-bar 1.15s ease-in-out infinite;
+}
+
+.src__wave span:nth-child(3n) {
+  animation-delay: 0.18s;
+}
+.src__wave span:nth-child(3n + 1) {
+  animation-delay: 0.36s;
+}
+.src__wave span:nth-child(4n) {
+  animation-delay: 0.52s;
+}
+
+@keyframes wave-bar {
+  0%,
+  100% {
+    height: 26%;
+  }
+  50% {
+    height: 100%;
+  }
+}
+
+.chat__input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px 18px;
+  border-top: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 0.78rem;
+}
+
+.chat__input span {
+  position: relative;
+}
+
+.chat__input span::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: -6px;
+  width: 1.5px;
+  height: 13px;
+  background: var(--accent);
+  animation: blink-caret 1.1s steps(1) infinite;
+}
+
+.chat__input b {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  margin-left: auto;
+  border-radius: 50%;
+  background: var(--accent-tint);
+  color: var(--accent);
+}
+
+.chat__input .icon {
+  width: 15px;
+  height: 15px;
+}
+
+/* Suzuvchi chiplar */
+.hero__chip {
+  position: absolute;
+  z-index: 3;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: var(--r-full);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hero__chip .icon {
+  width: 17px;
+  height: 17px;
+  color: var(--accent);
+}
+
+.hero__chip--1 {
+  top: 13%;
+  left: -16%;
+}
+
+.hero__chip--2 {
+  bottom: 17%;
+  right: -12%;
+}
+
+@media (min-width: 640px) {
+  .hero__chip {
+    display: flex;
+  }
+}
+
+@media (min-width: 960px) {
+  .hero__inner {
+    /* Chap ustun ikkala CTA bitta qatorga sig'adigan darajada keng */
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+  .hero__scroll {
+    display: block;
+  }
+  .phone {
+    width: min(340px, 100%);
+  }
+}
