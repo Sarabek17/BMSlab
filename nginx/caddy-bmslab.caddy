@@ -1,0 +1,28 @@
+# >>> BMSLAB BEGIN — source: BMSlab repo nginx/caddy-bmslab.caddy
+# bmslab.uz is served by the `bmslab-landing` container (host port 8095).
+# 80/443 on this VPS belong to `virtaks-caddy`, so this block is appended to
+# /opt/virtaks/joylash/Caddyfile. Same approach as the DEVPRO ERP block:
+# reach the container through the docker gateway + published port.
+
+www.bmslab.uz {
+	redir https://bmslab.uz{uri} permanent
+}
+
+bmslab.uz {
+	encode zstd gzip
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		-Server
+	}
+
+	reverse_proxy 172.18.0.1:8095
+
+	log {
+		output file /data/bmslab-kirish.log {
+			roll_size 20MiB
+			roll_keep 5
+		}
+	}
+}
+# <<< BMSLAB END
