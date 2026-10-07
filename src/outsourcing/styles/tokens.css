@@ -1,0 +1,71 @@
+/* /outsourcing/ design tokens — dark premium theme. Brand accents from src/styles/tokens.css. */
+
+:root {
+  /* Surfaces */
+  --bg: #05070f;
+  --bg-2: #080c1a;
+  --navy: #0f172a;
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-2: rgba(255, 255, 255, 0.06);
+  --surface-solid: #0b1022;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  /* Text (AA on --bg: text 17:1, muted 8.4:1, dim 5.6:1) */
+  --text: #eef2f8;
+  --text-muted: #a8b2c7;
+  --text-dim: #8590a6;
+
+  /* Brand */
+  --cyan: #22d3ee;
+  --cyan-soft: #7debff;
+  --indigo: #6b7cf0;
+  --violet: #9d7bff;
+  --success: #34d399;
+  --danger: #ff7a8a;
+  --gradient: linear-gradient(120deg, #22d3ee 0%, #6b7cf0 55%, #9d7bff 100%);
+  --gradient-soft: linear-gradient(120deg, rgba(34, 211, 238, 0.16), rgba(107, 124, 240, 0.16));
+  --glow-cyan: 0 0 0 1px rgba(34, 211, 238, 0.35), 0 12px 40px rgba(34, 211, 238, 0.18);
+
+  /* Radius */
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-xl: 30px;
+  --r-full: 999px;
+
+  /* Layout */
+  --container: 1320px;
+  --gutter: 20px;
+  --header-h: 72px;
+  --section-y: clamp(80px, 8.5vw, 144px);
+
+  /* Type */
+  --font: 'Manrope', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --fs-hero: clamp(2.6rem, 1rem + 4.7vw, 6.1rem);
+  --fs-h2: clamp(2.05rem, 1.25rem + 3.1vw, 4.1rem);
+  --fs-h3: clamp(1.3rem, 1.05rem + 0.75vw, 1.75rem);
+  --fs-h4: 1.16rem;
+  --fs-lead: clamp(1.05rem, 0.96rem + 0.38vw, 1.3rem);
+  --fs-body: 1rem;
+  --fs-sm: 0.9rem;
+  --fs-xs: 0.78rem;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 0.5s;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 36px;
+    --header-h: 84px;
+  }
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --container: 1440px;
+  }
+}

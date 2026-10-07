@@ -115,6 +115,20 @@ o'sha kalitni yozing. Kalit `ru.json` da bo'lmasa — o'zbekcha matn qoladi.
 
 Tilni tanlash tartibi: `?lang=ru` → `localStorage` → `uz`.
 
+### `/outsourcing/` — IT autsorsing sahifasi
+
+Ikkinchi sahifa (multi-page Vite, `vite.config.ts` dagi `input`): `outsourcing/index.html`
+→ `https://bmslab.uz/outsourcing/`. Kodi `src/outsourcing/` ichida (`main.ts`, `config.ts`,
+`i18n.ts`, `modules/`, `styles/`). Kontaktlar `src/config.ts` dan olinadi.
+
+- Tillar: EN (asosiy), UZ, RU — lug'at `src/outsourcing/i18n.ts` da, uchala til bitta
+  kalitlar to'plami bilan tiplangan (kalit yetishmasa — build xato beradi).
+  Tartib: `?lang=` → `localStorage` (`bmslab:outsourcing:lang`) → `en`.
+- Biznes raqamlari va va'dalar `src/outsourcing/config.ts` da (`TODO confirm with business`).
+  `COMPANY_FACTS` `null` bo'lsa sahifada ko'rinmaydi.
+- `prefers-reduced-motion` yoqilganda: preloader, globus aylanishi, gorizontal scroll va
+  maxsus kursor o'chadi, butun kontent darrov ko'rinadi.
+
 ---
 
 ## Serverga yuklash
