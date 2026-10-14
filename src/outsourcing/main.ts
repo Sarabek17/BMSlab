@@ -1,5 +1,5 @@
 /**
- * /outsourcing/ — entry point.
+ * BMS Lab outsourcing site (`/`) — entry point.
  * Order matters: language + content first, then layout-affecting modules, then motion.
  */
 

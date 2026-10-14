@@ -1,5 +1,5 @@
 /**
- * /outsourcing/ page configuration.
+ * Site configuration (BMS Lab outsourcing site, served at `/`).
  *
  * Contacts, brand and the Telegram bot are NOT duplicated here — they come from `src/config.ts`.
  * Everything below that is a business fact or a business commitment must be confirmed by the
@@ -8,9 +8,13 @@
 
 import type { Key } from './i18n';
 
-export const SITE_URL = 'https://bmslab.uz/outsourcing/';
+export const SITE_URL = 'https://bmslab.uz/';
 export const IT_PARK_URL = 'https://outsource.gov.uz';
-export const PRODUCT_URL = '/';
+/**
+ * Public URL of the Digital Twin product. It will move to its own domain; while `null`,
+ * every `[data-twin-link]` (case CTA, footer link) is removed from the page.
+ */
+export const PRODUCT_URL: string | null = null;
 export const LANG_STORAGE_KEY = 'bmslab:outsourcing:lang';
 
 export interface StatItem {

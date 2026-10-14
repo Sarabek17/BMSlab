@@ -3,6 +3,7 @@
 import { $$ } from '../../utils/dom';
 import { BRAND, CONTACT, botStart } from '../../config';
 import { getLang, onLangChange } from '../i18n';
+import { PRODUCT_URL } from '../config';
 
 export function initContent(): void {
   $$<HTMLAnchorElement>('[data-contact="phone"]').forEach((link) => {
@@ -15,6 +16,15 @@ export function initContent(): void {
   });
   $$<HTMLAnchorElement>('[data-contact="telegram"]').forEach((link) => {
     link.href = botStart('outsourcing');
+  });
+  $$<HTMLAnchorElement>('[data-twin-link]').forEach((link) => {
+    if (PRODUCT_URL === null) {
+      link.remove();
+      return;
+    }
+    link.href = PRODUCT_URL;
+    link.target = '_blank';
+    link.rel = 'noopener';
   });
   $$('[data-year]').forEach((el) => {
     el.textContent = String(BRAND.year);

@@ -1,6 +1,6 @@
 /**
  * Loyihaning barcha o'zgaruvchan qiymatlari shu yerda.
- * Narx, bot manzili, analitika ID — faqat shu fayldan tahrirlanadi.
+ * Kontaktlar, brend va Telegram bot — faqat shu fayldan tahrirlanadi.
  */
 
 export const BRAND = {
@@ -30,32 +30,3 @@ export function botStart(source: string): string {
   return `https://t.me/${TELEGRAM_BOT}?start=${encodeURIComponent(source)}`;
 }
 
-/**
- * Tarif narxlari biznes tomonidan tasdiqlanmagan.
- * `null` bo'lsa — HTML'dagi tarjima qilingan matn qoladi ("—", "Aloqaga chiqing"),
- * ya'ni soxta raqam chiqmaydi. Tasdiqlangach: personal: "149 000 so'm / oy" kabi yozing.
- * Bepul tarif narxi HTML'da (`pricing.free`) turadi — o'zgarmaydi.
- */
-export const PRICING: Record<'personal' | 'pro' | 'company', string | null> = {
-  personal: null,
-  pro: null,
-  company: null,
-};
-
-/**
- * Ariza formasi uchun backend endpoint. Loyiha hozircha faqat frontend —
- * `null` bo'lsa forma jo'natilmaydi, foydalanuvchiga Telegram orqali yozish taklif qilinadi.
- */
-export const FORM_ENDPOINT: string | null = null;
-
-/**
- * Hamkorlar ro'yxati shu faylda emas — `public/partners.json` da turadi.
- * Sabab: uni tahrirlash uchun saytni qayta build qilish shart emas.
- * Batafsil yo'riqnoma o'sha faylning ichida yozilgan.
- */
-
-/** Yandex Metrika hisob raqami. Olingach shu yerga qo'ying. */
-export const YANDEX_METRIKA_ID: number | null = null;
-
-/** Demo video fayli tayyor bo'lgach shu yerga yo'lni yozing (masalan '/demo.mp4'). */
-export const DEMO_VIDEO_SRC: string | null = null;
